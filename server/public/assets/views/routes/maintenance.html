@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<div>
+  <md-content layout-padding>
+
+    <ng-form name="quoteForm" class="" novalidate>
+      <md-input-container class="md-block">
+          <label>Quote:</label>
+          <input type="text" class="form-control" name="quote" ng-model="quote.quote" required>
+      </md-input-container>
+      <md-input-container class="md-block">
+          <label>Name:</label>
+          <input type="text" class="form-control" name="name" ng-model="quote.name" required>
+      </md-input-container>
+      <md-input-container class="md-block">
+          <label>Date:</label>
+          <input type="date" class="form-control" name="date" ng-model="quote.date" required>
+      </md-input-container>
+      <md-input-container class="md-block">
+          <label>Location:</label>
+          <input type="text" class="form-control" name="location" ng-model="quote.location" required>
+      </md-input-container>
+
+      <md-button ng-click="addQuote()" id="addCondition" class="md-raised md-primary" ng-disabled="quoteForm.$invalid">Add Quote</md-button>
+    </ng-form>
+
+
+
+    <!--<div ui-grid="{data: conditions}" class="conditionGrid"></div>-->
+    <div ui-grid="gridOptions" class="quoteGrid"></div>
+  </md-content>
+</div>
