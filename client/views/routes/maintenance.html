@@ -12,12 +12,12 @@
           <input type="text" class="form-control" name="name" ng-model="quote.name" required>
       </md-input-container>
       <md-input-container class="md-block">
-          <label>Date:</label>
-          <input type="date" class="form-control" name="date" ng-model="quote.date" required>
-      </md-input-container>
-      <md-input-container class="md-block">
           <label>Location:</label>
           <input type="text" class="form-control" name="location" ng-model="quote.location" required>
+      </md-input-container>
+      <md-input-container class="md-block">
+          <label>Date:</label>
+          <md-datepicker name="date" ng-model="quote.date" ng-required>
       </md-input-container>
 
       <md-button ng-click="addQuote()" id="addCondition" class="md-raised md-primary" ng-disabled="quoteForm.$invalid">Add Quote</md-button>
