@@ -4,4 +4,24 @@
   <div ng-repeat="quote in quotes">
     {{quote.quote}}
   </div>
+  <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="quote in quotes" active="quote.active">
+          <!-- <img ng-src="{{slide.image}}"> -->
+          <div class="carousel-caption">
+            <h4>{{quote.quote}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}">
+          <div class="carousel-caption">
+            <h4>Slide {{$index+1}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
 </div>
