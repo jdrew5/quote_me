@@ -1,6 +1,6 @@
-var myApp = angular.module("myApp", ['ngRoute', 'ngMaterial', 'ui.grid', 'ui.bootstrap']);
+var myApp = angular.module("myApp", ['ngRoute', 'ui.grid', 'ui.bootstrap']);
 
-myApp.config(['$routeProvider', '$mdThemingProvider', function($routeProvider, $mdThemingProvider){
+myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/main', {
             templateUrl: "/assets/views/routes/main.html",
@@ -12,10 +12,5 @@ myApp.config(['$routeProvider', '$mdThemingProvider', function($routeProvider, $
         }).
         otherwise({
             redirectTo: 'main'
-        })
-    $mdThemingProvider.theme('default')
-        .primaryPalette('indigo')
-        .accentPalette('pink')
-        .warnPalette('red')
-        .backgroundPalette('grey');
+        });
 }]);

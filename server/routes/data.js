@@ -15,7 +15,6 @@ mongoose.model('Quote', new Schema({
 var Quote = mongoose.model('Quote');
 
 router.get('/all', function(req, res, next){
-  console.log("getting all");
     return Quote.find({}).exec(function(err, quotes){
         if(err) throw new Error(err);
         res.send(JSON.stringify(quotes));
@@ -30,7 +29,7 @@ router.post('/', function(req, res, next){
       date: req.body.date,
       location: req.body.location
     });
-    console.log("quote ", quote);
+
     quote.save(function(err){
         if(err) console.log('save error %s', err);
         res.send(quote.toJSON());
@@ -39,7 +38,7 @@ router.post('/', function(req, res, next){
 });
 
 router.delete('/delete:_id', function(req, res, next){
-    console.log("deleting...", req.params._id);
+    
     Quote.findById(req.params._id)
         .exec(function(err, entries) {
             // changed `if (err || !doc)` to `if (err || !entries)`

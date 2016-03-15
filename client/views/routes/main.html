@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div>
+<div class="container">
   this is the main page
   <div ng-repeat="quote in quotes">
     {{quote.quote}}
@@ -7,14 +7,14 @@
   <div>
       <carousel interval="myInterval">
         <slide ng-repeat="quote in quotes" active="quote.active">
-          <!-- <img ng-src="{{slide.image}}"> -->
-          <div class="carousel-caption">
+
+        <div class="carousel-caption">
             <h4>{{quote.quote}}</h4>
           </div>
         </slide>
       </carousel>
     </div>
-    <div>
+    <!-- <div>
       <carousel interval="myInterval">
         <slide ng-repeat="slide in slides" active="slide.active">
           <img ng-src="{{slide.image}}">
@@ -23,5 +23,5 @@
           </div>
         </slide>
       </carousel>
-    </div>
+    </div> -->
 </div>

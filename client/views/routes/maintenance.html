@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<div>
-  <md-content layout-padding>
+<div class="container">
 
-    <ng-form name="quoteForm" class="" novalidate>
-      <md-input-container class="md-block">
+
+    <form name="quoteForm" class="" novalidate>
+
           <label>Quote:</label>
           <input type="text" class="form-control" name="quote" ng-model="quote.quote" required>
-      </md-input-container>
-      <md-input-container class="md-block">
+
           <label>Name:</label>
           <input type="text" class="form-control" name="name" ng-model="quote.name" required>
-      </md-input-container>
-      <md-input-container class="md-block">
+
           <label>Location:</label>
           <input type="text" class="form-control" name="location" ng-model="quote.location" required>
-      </md-input-container>
-      <md-input-container class="md-block">
-          <label>Date:</label>
-          <md-datepicker name="date" ng-model="quote.date" ng-required>
-      </md-input-container>
 
-      <md-button ng-click="addQuote()" id="addCondition" class="md-raised md-primary" ng-disabled="quoteForm.$invalid">Add Quote</md-button>
-    </ng-form>
+          <label>Date:</label>
+          <input type="date" name="date" ng-model="quote.date" required>
+
+
+      <button ng-click="addQuote()" id="addCondition" class="btn btn-primary" ng-disabled="quoteForm.$invalid">Add Quote</button>
+    </form>
 
 
 
     <!--<div ui-grid="{data: conditions}" class="conditionGrid"></div>-->
     <div ui-grid="gridOptions" class="quoteGrid"></div>
-  </md-content>
+
 </div>

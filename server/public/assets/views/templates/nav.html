@@ -1,6 +1,40 @@
-<div layout="row" layout-padding class="bg-dark-blue nav-dark" layout-align="space-between center">
-    <div class="" ng-controller="NavController">
-        <md-button ng-click="go('/main')" ng-class="{ 'md-accent': isActive('/main')}" class="">Main</md-button>
-        <md-button ng-click="go('/maintenance')" ng-class="{ 'md-accent': isActive('/maintenance')}" class="">Maintenance</md-button>
+<!-- <!DOCTYPE html> -->
+<!-- <div class="navbar">
+    <div class="nav nav-pills" ng-controller="NavController">
+        <button ng-click="go('/main')" ng-class="{ 'active': isActive('/main')}" class="">Main</button>
+        <button ng-click="go('/maintenance')" ng-class="{ 'active': isActive('/maintenance')}" class="">Maintenance</md-button>
       </div>
-</div>
+</div> -->
+
+<!-- <div class="row">
+    <div ng-controller="NavController" class="col-md-12 text-center">
+        <ul class="nav nav-pills nav-justified">
+            <li ng-class="{ active: isActive('/main')}"><a href="#main">Main</a></li>
+            <li ng-class="{ active: isActive('/maintenance')}"><a href="#maintenance">Maintenance</a></li>
+        </ul>
+    </div>
+</div> -->
+
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Quote Me</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ng-class="{ active: isActive('/main')}"><a href="#main">Main</a></li>
+        <li ng-class="{ active: isActive('/maintenance')}"><a href="#maintenance">Maintenance</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

@@ -48,18 +48,24 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
-            angularMaterial: {
+            bootstrap: {
                 expand: true,
-                cwd: 'node_modules',
+                cwd: 'node_modules/bootstrap/dist/css',
                 src: [
-                    "angular-animate/angular-animate.min.js",
-                    "angular-aria/angular-aria.min.js",
-                    "angular-animate/angular-animate.min.js.map",
-                    "angular-aria/angular-aria.min.js.map",
-                    "angular-material/angular-material.min.js",
-                    "angular-material/angular-material.min.css"
+                    "bootstrap.min.css",
+                    "bootstrap.min.css.map"
                 ],
-                "dest": "server/public/vendors/"
+                "dest": "server/public/vendors/bootstrap"
+            },
+            bootstrapFonts: {
+                expand: true,
+                cwd: 'node_modules/bootstrap/fonts',
+                src: [
+                    "glyphicons-halflings-regular.woff2",
+                    "glyphicons-halflings-regular.woff",
+                    "glyphicons-halflings-regular.ttf"
+                ],
+                "dest": "server/public/vendors/fonts"
             },
             html: {
                 expand: true,
